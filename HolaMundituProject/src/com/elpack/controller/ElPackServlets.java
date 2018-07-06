@@ -7,17 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.elpack.model.*;
+
 /**
  * Servlet implementation class ElPack
  */
 @WebServlet("/ElPack")
-public class ElPack extends HttpServlet {
+public class ElPackServlets extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ElPack() {
+    public ElPackServlets() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,7 +36,11 @@ public class ElPack extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	response.getWriter().write("Testitu");
+//		response.getWriter().write("Testitu");
+		String nombre = request.getParameter("testo1");
+		ElPack objElPack= new ElPack();
+		objElPack.setNombre(nombre);
+		response.getWriter().write("saca el pack "+objElPack.getNombre());		
 	}
 
 	/**

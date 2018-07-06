@@ -9,6 +9,13 @@
 <title>practica2Pak</title>
 </head>
 <body>
+    <form action="ElPack" method="POST">
+        <div>
+            <label for="testo1">test1</label>
+            <input type="text" id="txtTest1"name="testo1">
+        </div>
+        <input type="submit"value="Dale!">
+    </form>
 <script src="js/jquery3.3.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
